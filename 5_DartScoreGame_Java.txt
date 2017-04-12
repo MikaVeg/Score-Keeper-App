@@ -1,0 +1,129 @@
+﻿package com.example.android.dartscoregame;
+
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+    int scorePlayer1 = 0;
+    int scorePlayer2 = 0;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        displayForPlayer1(0);
+        displayForPlayer2(0);
+    }
+
+    /**
+     * Increase the score for Player1 by 8 points.
+     */
+    public void addEightForPlayer1(View v) {
+        scorePlayer1 = scorePlayer1 + 8;
+        displayForPlayer1(scorePlayer1);
+    }
+
+    /**
+     * Increase the score for Player1 by 4 points.
+     */
+    public void addFourForPlayer1(View v) {
+        scorePlayer1 = scorePlayer1 + 4;
+        displayForPlayer1(scorePlayer1);
+    }
+
+    /**
+     * Increase the score for Player1 by 2 points.
+     */
+    public void addTwoForPlayer1(View v) {
+        scorePlayer1 = scorePlayer1 + 2;
+        displayForPlayer1(scorePlayer1);
+    }
+
+    /**
+     * Increase the score for Player1 by 1 point.
+     */
+    public void addOneForPlayer1(View v) {
+        scorePlayer1 = scorePlayer1 + 1;
+        displayForPlayer1(scorePlayer1);
+    }
+
+    /**
+     * Subtract the score for Player1 by 3 points.
+     */
+    public void subtractThreeForPlayer1(View v) {
+        scorePlayer1 = scorePlayer1 - 3;
+        displayForPlayer1(scorePlayer1);
+    }
+
+
+
+
+    /**
+     * Increase the score for Player2 by 8 points.
+     */
+    public void addEightForPlayer2(View v) {
+        scorePlayer2 = scorePlayer2 + 8;
+        displayForPlayer2(scorePlayer2);
+    }
+
+    /**
+     * Increase the score for Player2 by 4 points.
+     */
+    public void addFourForPlayer2(View v) {
+        scorePlayer2 = scorePlayer2 + 4;
+        displayForPlayer2(scorePlayer2);
+    }
+
+    /**
+     * Increase the score for Player2 by 2 points.
+     */
+    public void addTwoForPlayer2(View v) {
+        scorePlayer2 = scorePlayer2 + 2;
+        displayForPlayer2(scorePlayer2);
+    }
+
+    /**
+     * Increase the score for Player2 by 1 point.
+     */
+    public void addOneForPlayer2(View v) {
+        scorePlayer2 = scorePlayer2 + 1;
+        displayForPlayer2(scorePlayer2);
+    }
+
+    /**
+     * Subtract the score for Player2 by 3 points.
+     */
+    public void subtractThreeForPlayer2(View v) {
+        scorePlayer2 = scorePlayer2 - 3;
+        displayForPlayer2(scorePlayer2);
+    }
+
+    /**
+     * Displays the given score for Player1.
+     */
+    public void displayForPlayer1(int score) {
+        TextView scoreView = (TextView) findViewById(R.id.player1_score);
+        scoreView.setText(String.valueOf(score));
+    }
+
+    /**
+     * Displays the given score for Player2.
+     */
+    public void displayForPlayer2(int score) {
+        TextView scoreView = (TextView) findViewById(R.id.player2_score);
+        scoreView.setText(String.valueOf(score));
+    }
+
+    /**
+     * Reset the score for Player1 and Player2.
+     */
+    public void ResetScore(View v) {
+        scorePlayer1 = 0;
+        scorePlayer2 = 0;
+        displayForPlayer1(scorePlayer1);
+        displayForPlayer2(scorePlayer2);
+    }
+
+}
